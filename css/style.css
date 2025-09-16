@@ -1,0 +1,85 @@
+:root{
+  --max-w:1200px;
+  --accent:#2b6ef6;
+  --muted:#6b7280;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --radius:12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.site-header{background:transparent;position:sticky;top:0;z-index:60}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-weight:700;color:#0f172a;text-decoration:none;font-size:20px}
+.logo span{color:var(--accent)}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 6px}
+.btn{background:var(--accent);color:white;padding:10px 16px;border-radius:8px;text-decoration:none;display:inline-block}
+.btn-secondary{background:transparent;color:var(--accent);border:1px solid rgba(43,110,246,0.12)}
+.btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:8px 12px;border-radius:8px}
+.hamburger{display:none;background:none;border:0;font-size:20px}
+
+/* HERO */
+.hero{padding:72px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 520px;gap:32px;align-items:center}
+.hero-content h1{font-size:36px;margin:0 0 12px}
+.hero-content p{color:var(--muted);margin:0 0 18px}
+.cta-row{display:flex;gap:12px;margin-bottom:18px}
+.metrics{display:flex;gap:20px;list-style:none;padding:0;margin:12px 0 0}
+.metrics li{background:var(--card);padding:10px 14px;border-radius:10px;box-shadow:0 4px 14px rgba(2,6,23,0.06);text-align:center}
+.metrics li strong{display:block}
+.hero-media .device-mockup{background:linear-gradient(180deg,#fff,#f1f5ff);padding:20px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.08)}
+
+/* sections */
+.section{padding:56px 0}
+.section.alt{background:linear-gradient(180deg,#fff,#fbfdff)}
+.section-title{font-size:24px;margin:0 0 6px}
+.section-sub{color:var(--muted);margin:0 0 24px}
+
+/* features */
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.feature .icon{font-size:24px;margin-bottom:8px}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+
+/* testimonials */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.testimonial{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+
+/* team */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.member{text-align:center}
+.member img{width:120px;height:120px;border-radius:999px;object-fit:cover;display:block;margin:0 auto 12px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.contact-card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.contact-card label{display:block;margin-bottom:12px}
+.contact-card input,.contact-card textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px;margin-top:6px}
+
+/* footer */
+.site-footer{padding:18px 0;background:transparent;border-top:1px solid rgba(15,23,42,0.04)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+/* responsiveness */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .nav{display:none}
+  .hamburger{display:block}
+  .features-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .hero-content h1{font-size:26px}
+}
