@@ -3,185 +3,170 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AI Tech Company — Landing</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="logo" href="#">AI<span>Tech</span></a>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#contact" class="btn btn-ghost">Contact</a>
+      <a class="logo" href="#top">YourName</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav">
+        <ul>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
       </nav>
-      <button class="hamburger" aria-label="menu">☰</button>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1>Build smarter products with AI</h1>
-          <p>Fast deployment. Scalable APIs. Production-ready models that accelerate innovation.</p>
-          <div class="cta-row">
-            <a class="btn" href="#contact">Get Started</a>
-            <a class="btn btn-secondary" href="#services">Our Services</a>
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Hi, my name is</p>
+          <h1>YOUR NAME</h1>
+          <p class="lead">I build delightful, accessible web experiences — front-end development, UI design, and small JS apps.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">See projects</a>
+            <a class="btn muted" href="#contact">Get in touch</a>
           </div>
-          <ul class="metrics">
-            <li><strong>99.99%</strong><span>uptime</span></li>
-            <li><strong>100K+</strong><span>requests/day</span></li>
-            <li><strong>50+</strong><span>integrations</span></li>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <!-- decorative card -->
+          <div class="card-content">
+            <svg width="100%" height="100%" viewBox="0 0 400 320" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6b8cff"/>
+                  <stop offset="1" stop-color="#9cffb5"/>
+                </linearGradient>
+              </defs>
+              <rect rx="16" width="100%" height="100%" fill="url(#g)"></rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="split">
+        <div class="split-left">
+          <h2>About me</h2>
+          <p>I focus on shipping clean, maintainable front-end code. I love HTML, CSS and modern JavaScript — and I enjoy making interfaces that feel smooth and intentional.</p>
+          <ul class="about-list">
+            <li>Front-end engineering (React / Vanilla JS)</li>
+            <li>Accessible & responsive design</li>
+            <li>Performance-minded builds</li>
           </ul>
         </div>
-        <div class="hero-media">
-          <div class="device-mockup">
-            <!-- Placeholder image - replace with your illustration -->
-            <img src="https://via.placeholder.com/520x360.png?text=AI+Dashboard" alt="AI dashboard mockup">
+        <div class="split-right">
+          <div class="profile-card">
+            <img src="https://via.placeholder.com/320x320.png?text=Photo" alt="Your photo">
+            <div class="profile-meta">
+              <h3>Your Name</h3>
+              <p>Frontend Developer</p>
+              <div class="profile-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
-      <div class="container">
-        <h2 class="section-title">Why choose us</h2>
-        <p class="section-sub">Everything you need to ship intelligent features faster.</p>
-        <div class="features-grid">
-          <article class="feature">
-            <div class="icon">⚡</div>
-            <h3>Fast APIs</h3>
-            <p>Low-latency, autoscaling APIs for inference and data pipelines.</p>
-          </article>
-          <article class="feature">
-            <div class="icon">🔒</div>
-            <h3>Enterprise security</h3>
-            <p>End-to-end encryption, SOC-ready controls and role-based access.</p>
-          </article>
-          <article class="feature">
-            <div class="icon">🔁</div>
-            <h3>Integrations</h3>
-            <p>Plug into your stack — SDKs, webhooks and native connectors.</p>
-          </article>
-          <article class="feature">
-            <div class="icon">📈</div>
-            <h3>Observability</h3>
-            <p>Logging, metrics and model monitoring out of the box.</p>
-          </article>
-        </div>
+    <section class="section container" id="projects">
+      <h2>Selected projects</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <div class="project-media" style="background: linear-gradient(135deg,#6b8cff,#9cffb5);"></div>
+          <div class="project-body">
+            <h3>Project One</h3>
+            <p>Short description of the project and what technologies were used. Keep it concise and clear.</p>
+            <div class="project-actions">
+              <a href="#" class="btn small">View</a>
+              <a href="#" class="btn ghost small">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media" style="background: linear-gradient(135deg,#ff9a9e,#fecfef);"></div>
+          <div class="project-body">
+            <h3>Project Two</h3>
+            <p>Short description highlighting the problem solved and the impact or result.</p>
+            <div class="project-actions">
+              <a href="#" class="btn small">View</a>
+              <a href="#" class="btn ghost small">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media" style="background: linear-gradient(135deg,#f6d365,#fda085);"></div>
+          <div class="project-body">
+            <h3>Project Three</h3>
+            <p>Short blurb. You can replace these with real screenshots and links.</p>
+            <div class="project-actions">
+              <a href="#" class="btn small">View</a>
+              <a href="#" class="btn ghost small">Source</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <div class="services-grid">
-          <div class="service">
-            <h4>Custom Model Development</h4>
-            <p>From prototyping to production-ready models tuned for your data.</p>
+    <section class="section container" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" autocomplete="off">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send message</button>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
           </div>
-          <div class="service">
-            <h4>API Hosting & MLOps</h4>
-            <p>Deploy, monitor and scale models with CI/CD best practices.</p>
-          </div>
-          <div class="service">
-            <h4>Data & Labeling</h4>
-            <p>High-quality pipelines and annotation services to bootstrap models.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        </form>
 
-    <!-- TESTIMONIALS -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">What clients say</h2>
-        <div class="testimonials-grid">
-          <blockquote class="testimonial">
-            <p>"Their team took our prototype to production in 6 weeks — the results were remarkable."</p>
-            <cite>— Maya R., CTO, Finlytics</cite>
-          </blockquote>
-          <blockquote class="testimonial">
-            <p>"Excellent support and transparent pricing. Models are fast and reliable."</p>
-            <cite>— Jamal K., Product Lead</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section id="team" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Our team</h2>
-        <div class="team-grid">
-          <div class="member">
-            <img src="https://via.placeholder.com/160" alt="Founder">
-            <h4>Atharva Sonawane</h4>
-            <p>Founder & ML Engineer</p>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/160" alt="Head of Engineering">
-            <h4>Priya Sharma</h4>
-            <p>Head of Engineering</p>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/160" alt="Head of Product">
-            <h4>Dev Patel</h4>
-            <p>Product</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-      <div class="container contact-grid">
-        <div class="contact-card">
-          <h2>Contact us</h2>
-          <p>Tell us about your project and we'll get back within one business day.</p>
-          <form id="contactForm">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" required>
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button class="btn" type="submit">Send message</button>
-          </form>
-        </div>
-        <div class="contact-info">
-          <h3>Office</h3>
-          <p>123 AI Street<br/>Mumbai, India</p>
-          <h3>Email</h3>
-          <p>hello@aitech.example</p>
-          <h3>Phone</h3>
-          <p>+91 98765 43210</p>
-        </div>
+        <aside class="contact-info">
+          <h3>Let's build something</h3>
+          <p>I'm available for freelance or full-time work. Tell me about your project and timeline.</p>
+          <ul>
+            <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li>Location: Remote / Your City</li>
+          </ul>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> AI Tech Company</div>
-      <div class="socials">
-        <a href="#" aria-label="Twitter">Twitter</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-      </div>
+      <p>© <span id="year"></span> Your Name. Built with care.</p>
+      <nav class="footer-nav">
+        <a href="#top">Back to top</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
